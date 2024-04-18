@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Word, Definition, Source
+
+# Register models
+admin.site.register(Word)
+admin.site.register(Definition)
+admin.site.register(Source)
