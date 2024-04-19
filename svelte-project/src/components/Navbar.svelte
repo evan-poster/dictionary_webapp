@@ -7,7 +7,7 @@
 <div class="ui fixed inverted menu">
 	<div class="ui container">
 		<a href="/" class="header item">
-			<img class="logo" src="assets/images/logo.png" alt="Dictionary Logo"/>
+			<img class="logo" src="/images/logo.png" alt="Dictionary Logo"/>
 			Dictionary
 		</a>
 		<a href="/" class={Page === '/' ? 'active item' : 'item'}>Home</a>
