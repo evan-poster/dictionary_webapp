@@ -14,5 +14,7 @@ Languages Used:
 - HTML/CSS/JavaScript
 
 Other technologies involved:
-- Git
+- git
 - npm
+- pip/venv
+- sql
