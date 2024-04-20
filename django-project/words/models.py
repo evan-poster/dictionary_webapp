@@ -1,15 +1,5 @@
 from django.db import models
 
-# Source model
-class Source():
-    # Fields
-    name = models.CharField(max_length=255)
-    url = models.CharField(max_length=255)
-
-    # Methods
-    def __str__(self):
-        return self.name
-
 
 # Words model
 class Word(models.Model):
@@ -22,11 +12,11 @@ class Word(models.Model):
 
 
 class Definition(models.Model):
-    # Fields
-    word = models.ForeignKey(Word, on_delete=models.CASCADE)
+    # Fields: Word, Part of Speech, and Definition
+    word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name="definitions")
+    part_of_speech = models.CharField(max_length=255)
     definition = models.TextField()
-    source = models.ForeignKey(Source, on_delete=models.CASCADE)
 
     # Methods
     def __str__(self):
-        return self.definition
+        return f"{self.word} - {self.definition[:20]}"  # self.definition
