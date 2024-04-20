@@ -4,7 +4,7 @@ from django.db import models
 # Words model
 class Word(models.Model):
     # Fields
-    word = models.CharField(max_length=255)
+    word = models.CharField(max_length=255, unique=True)
 
     # Methods
     def __str__(self):
