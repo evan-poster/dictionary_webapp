@@ -10,6 +10,9 @@ class Word(models.Model):
     def __str__(self):
         return self.word
 
+    class Meta:
+        ordering = ['word']
+
 
 class Definition(models.Model):
     # Fields: Word, Part of Speech, and Definition
@@ -20,3 +23,6 @@ class Definition(models.Model):
     # Methods
     def __str__(self):
         return f"{self.word} - {self.definition[:20]}"  # self.definition
+
+    class Meta:
+        ordering = ['word', 'part_of_speech', 'definition']
