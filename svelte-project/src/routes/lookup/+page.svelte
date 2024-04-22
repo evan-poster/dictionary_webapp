@@ -20,7 +20,11 @@
         <div class="item">
           <div class="content">
             <div class="header">{result.word}</div>
-            <div class="description">{result.definition}</div>
+            <!-- Loopo through definitions and display them -->
+            {#each result.definitions as definition}
+            <div class="description">{definition.part_of_speech}</div>
+            <div class="description">{definition.definition}</div>
+            {/each}
           </div>
         </div>
       </div>
@@ -34,7 +38,7 @@
   let searchTerm = '';
 
   function search() {
-    const url = `/api/lookup/${searchTerm}`;
+    const url = `/word/${searchTerm}`;
     fetch(url)
       .then(resp => resp.json())
       .then(data => result = data)
