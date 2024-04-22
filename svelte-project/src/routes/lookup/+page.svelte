@@ -31,6 +31,19 @@
     </div>
   </div>
   {/if}
+  {#if !result}
+  <div class="row">
+    <div class="ten wide column">
+      <div class="ui items">
+        <div class="item">
+          <div class="content">
+            <div class="header">No results found</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/if}
 </div>
 
 <script>
@@ -38,7 +51,8 @@
   let searchTerm = '';
 
   function search() {
-    const url = `/word/${searchTerm}`;
+    console.log("Searching for ${searchTerm}");
+    const url = `http://127.0.0.1:8000/word/${searchTerm}`;
     fetch(url)
       .then(resp => resp.json())
       .then(data => result = data)
