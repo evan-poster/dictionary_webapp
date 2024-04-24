@@ -12,6 +12,7 @@
 		</a>
 		<a href="/" class={Page === '/' ? 'active item' : 'item'}>Home</a>
 		<a href="/lookup" class={Page === '/lookup' ? 'active item' : 'item'}>Lookup</a>
+		<a href="/all" class={Page === '/all' ? 'active item' : 'item'}>All Words</a>
 		<a href="/about" class={Page === '/about' ? 'active item' : 'item'}>About</a>
 	</div>
 </div>
