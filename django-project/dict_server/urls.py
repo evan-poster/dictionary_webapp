@@ -10,7 +10,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # API routes
     path('api/', include('words.urls')),
-    path('', svelte_app),
-    path('svelte', svelte_app),
-    # path('vue', vue_app),
 ]
